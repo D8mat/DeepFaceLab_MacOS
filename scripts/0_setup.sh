@@ -10,7 +10,7 @@ is_arm64() {
   [ "$(uname -m)" == "arm64" ]
 }
 
-is_arm64 && echo "Running on Apple Silicon (M1-M4)"
+is_arm64 && echo "Running on Apple M1 chip"
 
 if [ ! -d .dfl/DeepFaceLab ]; then
   echo "Cloning DeepFaceLab"
@@ -22,7 +22,7 @@ if [ ! -d .dfl/DeepFaceLab ]; then
 fi
 
 if [ ! -d .dfl/env ]; then
-  virtualenv -p python3.10 .dfl/env
+  virtualenv -p python3 .dfl/env
 fi
 
 source .dfl/env/bin/activate
@@ -48,7 +48,7 @@ echo "Using $reqs_file for $(python -V)"
 
 if is_arm64; then
   if [[ -z "$(brew ls --versions hdf5)" ]]; then
-    echo "ERROR: HDF5 needs to be installed to run DeepFaceLab on Apple Silicon."
+    echo "ERROR: HDF5 needs to be installed to run DeepFaceLab on M1 chip."
     echo "You can install it with 'brew install hdf5'. For more details, see https://formulae.brew.sh/formula/hdf5"
     echo "Once it is installed, run ./scripts/0_setup.sh again"
     exit 1

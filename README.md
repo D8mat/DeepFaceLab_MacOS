@@ -31,3 +31,16 @@ Now you can put your `data_src.mp4` and `data_dst.mp4` files into the `workspace
 ## Tutorials and docs
 
 See [DeepFaceLab](https://github.com/iperov/DeepFaceLab) project for links to guides and tutorials.
+
+## GUI
+
+A simple graphical interface is available via `ui.py`.
+Run it with:
+
+```
+python3 ui.py
+```
+
+The window provides buttons to extract images from videos,
+extract faces, train models and merge results by calling
+the scripts located in the `scripts/` directory.

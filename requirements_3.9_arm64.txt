@@ -1,5 +1,5 @@
 numpy==1.21.4
-opencv-python==4.5.5.62
+opencv-python==4.12.0.88
 numexpr==2.8.1
 h5py==3.1.0
 tqdm==4.62.3

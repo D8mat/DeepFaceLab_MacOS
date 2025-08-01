@@ -1,7 +1,7 @@
 numpy==1.22.2
 numexpr==2.8.1
 opencv-python==4.5.5.62
-scipy==1.8.0
+scipy==1.13.1
 tensorflow==2.8.4
 colorama==0.4.4
 tqdm==4.62.3
